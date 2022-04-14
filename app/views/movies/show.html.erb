@@ -1,7 +1,7 @@
 <div>
   <div>
     <h1>
-      Movie #<%= @the_movie %> details
+      Movie #<%= @the_movie.id %> details
     </h1>
 
     <div>
@@ -12,15 +12,11 @@
       </div>
 
       <div>
-        <a href="<%= edit_movie_path(@the_movie)%>">
-          Edit movie
-        </a>
+        <%=link_to "Edit movie", edit_movie_path(@the_movie)%>
       </div>
 
       <div>
-        <a href="<%= movie_path(@the_movie) %>" data-method="delete">
-          Delete movie
-        </a>
+        <%= link_to "Delete movie", @the_movie, method:"delete"%>
       </div>
     </div>
 
