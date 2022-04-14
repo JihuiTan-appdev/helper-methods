@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  #root "movies#index"
   get "/" => "movies#index"
 
   # Routes for the Movie resource:
