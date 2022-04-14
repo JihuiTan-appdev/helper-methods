@@ -1,0 +1,24 @@
+<h1>Edit director</h1>
+
+<% @director.errors.full_messages.each do |message| %>
+  <p style="color: red;"><%= message %></p>
+<% end %>
+
+<%#.id could be lifted%>
+<%=form_with(model: @director) do |form|%>
+
+    
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name%>
+  </div>
+
+  <div>
+    <%=form.label :age%>
+    <%=form.number_field :age%>
+  </div>
+
+  <%=form.button%>
+
+<%end%>
+

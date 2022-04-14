@@ -1,10 +1,10 @@
 <h1>
-  List of all movies
+  List of all directors
 </h1>
 
 
 <div>
-  <%= link_to "Add a new movie", new_movie_path%>
+  <%= link_to "Add a new director", new_director_path%>
 </div>
 
 <hr>
@@ -35,30 +35,30 @@
     </th>
   </tr>
 
-  <% @movies.each do |movie| %>
+  <% @directors.each do |director| %>
   <tr>
     <td>
-      <%= movie.id %>
+      <%= director.id %>
     </td>
 
     <td>
-      <%= movie.title %>
+      <%= director.name %>
     </td>
 
     <td>
-      <%= movie.description %>
+      <%= director.age %>
     </td>
 
     <td>
-      <%= time_ago_in_words(movie.created_at) %> ago
+      <%= time_ago_in_words(director.created_at) %> ago
     </td>
     <td>
-      <%= time_ago_in_words(movie.updated_at) %> ago
+      <%= time_ago_in_words(director.updated_at) %> ago
     </td>
 
     <td>
       <%#conventionally, will get movie.class + "_url"%>
-      <%= link_to "Show details", movie%>
+      <%= link_to "Show details", director%>
     </td>
   </tr>
   <% end %>
